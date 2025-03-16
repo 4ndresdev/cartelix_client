@@ -1,7 +1,7 @@
-import Search from "@/components/ui/Search";
+import Search from "@/components/ui/movie/Search";
 import useMovies from "@/pages/movies/hooks/useMovies";
-import MoviesGrid from "@/components/ui/MoviesGrid";
-import TrendingMoviesGrid from "@/components/ui/TrendingMoviesGrid";
+import MoviesGrid from "@/components/ui/movie/MoviesGrid";
+import TrendingMoviesGrid from "@/components/ui/movie/TrendingMoviesGrid";
 
 const Movies = () => {
   const { searchTerm, setSearchTerm, movies, trendingMovies } = useMovies();
