@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary: #030014;
+  --color-secondary: #060124;
   --color-nexflix-red: #e50914;
   --color-light-100: #cecefb;
   --color-light-200: #a8b5db;
@@ -135,6 +136,54 @@
 
       & button {
         @apply w-full mt-5 bg-nexflix-red text-white py-2 rounded-md cursor-pointer;
+      }
+    }
+  }
+
+  .movie-details {
+    @apply w-full md:h-screen grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 overflow-hidden;
+
+    & .movie-details-header {
+      @apply overflow-hidden w-full md:h-full md:col-span-2 xl:col-span-3 bg-secondary flex justify-center items-center md:p-10 relative;
+
+      & button {
+        @apply z-20 w-12 h-12 bg-[#07073a] absolute top-0 left-0 m-5 rounded-2xl flex justify-center items-center cursor-pointer;
+      }
+
+      & .poster {
+        @apply md:rounded-2xl shadow-inner shadow-light-100/10 overflow-hidden relative max-w-full md:max-w-96 h-full w-full md:h-auto;
+
+        & img {
+          @apply object-cover w-full h-full;
+        }
+
+        & .movie-shadow {
+          @apply absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-black to-transparent;
+        }
+      }
+    }
+
+    & .movie-details-content {
+      @apply relative md:overflow-y-auto;
+
+      & .backdrop-path {
+        @apply w-full h-40 overflow-hidden hidden md:block relative;
+
+        & img {
+          @apply w-full h-full object-cover;
+        }
+
+        & .backdrop-shadow {
+          @apply absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent;
+        }
+      }
+
+      & .button-selected {
+        @apply bg-gray-800 text-white px-3 py-1 rounded-md flex flex-col cursor-pointer;
+      }
+
+      & .book {
+        @apply w-full bg-nexflix-red mb-5 mt-5 py-3 text-white rounded-md disabled:opacity-50;
       }
     }
   }

@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Movies, MoviesLayout } from "@/pages/movies";
+import { Movies, MovieDetails, MoviesLayout } from "@/pages/movies";
 import PageNotFound from "@/pages/PageNotFound";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -14,6 +14,7 @@ function App() {
           <Route element={<MoviesLayout />}>
             <Route index path="/" element={<Movies />} />
           </Route>
+          <Route path="/movies/:movie_id" element={<MovieDetails />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

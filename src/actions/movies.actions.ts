@@ -1,4 +1,5 @@
 import cartelixAPI from "@/api/movies.api";
+import { MovieDetail } from "@/interfaces/movieDetails.interface";
 import { Movies, TrendingMovies } from "@/interfaces/movies.interface";
 
 export const getMovies = async (searchTerm: string): Promise<Movies[]> => {
@@ -7,8 +8,8 @@ export const getMovies = async (searchTerm: string): Promise<Movies[]> => {
   return data;
 };
 
-export const getMovieById = async (id: number): Promise<Movies> => {
-  const { data } = await cartelixAPI.get<Movies>(`/movies/${id}/details`);
+export const getMovieById = async (id: number): Promise<MovieDetail> => {
+  const { data } = await cartelixAPI.get<MovieDetail>(`/movies/${id}/details`);
   return data;
 };
 
