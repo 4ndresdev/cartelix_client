@@ -5,13 +5,22 @@ import {
   MovieDetailsDescription,
   MovieDetailsDates,
   MovieDetailsTimes,
-  // MovieDetailsSeatsSelection,
+  MovieDetailsSeatsSelection,
 } from "@/components/ui/movieDetails";
 
 const MovieDetails = () => {
   const { movie_id } = useParams();
-  const { movie, bookDate, setBookDate, bookTime, setBookTime } =
-    useMovieDetails(Number(movie_id));
+  const {
+    movie,
+    bookDate,
+    setBookDate,
+    bookTime,
+    setBookTime,
+    seats,
+    selectedSeats,
+    setSelectedSeats,
+    totalPrice,
+  } = useMovieDetails(Number(movie_id));
 
   if (movie.isLoading) {
     return <div>Loading...</div>;
@@ -44,19 +53,30 @@ const MovieDetails = () => {
               setBookDate={setBookDate}
             />
           </section>
-          <section>
-            {bookDate && bookDate.show_times.length > 0 && (
+          {bookDate && bookDate.show_times.length > 0 && (
+            <section>
               <MovieDetailsTimes
                 times={bookDate.show_times}
                 bookTime={bookTime?.time || null}
                 setBookTime={setBookTime}
               />
-            )}
-          </section>
+            </section>
+          )}
           <hr className="mt-5 border border-slate-900" />
-          <section>{/* <MovieDetailsSeatsSelection /> */}</section>
-          <button className="book" disabled>
-            Book
+          {seats && seats.length > 0 && (
+            <section>
+              <MovieDetailsSeatsSelection
+                seats={seats}
+                selectedSeats={selectedSeats}
+                setSelectedSeats={setSelectedSeats}
+              />
+            </section>
+          )}
+          <button
+            className="book cursor-pointer"
+            disabled={!selectedSeats.length}
+          >
+            Book {totalPrice}$
           </button>
         </div>
       </div>

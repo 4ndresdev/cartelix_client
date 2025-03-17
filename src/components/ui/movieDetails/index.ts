@@ -3,6 +3,7 @@ import MovieDetailsDescription from "@/components/ui/movieDetails/MovieDetailsDe
 import MovieDetailsHeader from "@/components/ui/movieDetails/MovieDetailsHeader";
 import MovieDetailsSeatsSelection from "@/components/ui/movieDetails/MovieDetailsSeatsSelection";
 import MovieDetailsTimes from "@/components/ui/movieDetails/MovieDetailsTimes";
+import Seat from "@/components/ui/movieDetails/Seat";
 
 export {
   MovieDetailsDates,
@@ -10,4 +11,5 @@ export {
   MovieDetailsHeader,
   MovieDetailsSeatsSelection,
   MovieDetailsTimes,
+  Seat,
 };
