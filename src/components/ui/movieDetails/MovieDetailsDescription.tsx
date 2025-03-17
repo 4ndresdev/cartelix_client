@@ -27,7 +27,7 @@ const MovieDetailsDescription = ({ movie }: MovieDetailsDescriptionProps) => {
             if (actor.c_actors.profile_path) {
               return (
                 <div
-                  className="w-12 h-12 mr-2 rounded-full overflow-hidden border-2 border-white"
+                  className="w-14 h-14 mr-2 rounded-full overflow-hidden border-3 border-white"
                   key={actor.c_actors.id}
                 >
                   <img

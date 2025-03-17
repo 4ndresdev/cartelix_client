@@ -14,7 +14,7 @@ const MovieDetailsDates = ({
 }: MovieDetailsDatesProps) => {
   return (
     <div className="mt-2">
-      <p className="text-slate-200">Select days</p>
+      <p className="text-slate-200">Select a date</p>
       <div className="flex flex-wrap gap-2 mt-5">
         {dates.map((date) => {
           const formattedDate = format(date.date, "yyyy-MM-dd");
