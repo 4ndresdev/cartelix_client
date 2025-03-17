@@ -24,7 +24,7 @@ const PageNotFound = () => {
           But don't worry, you can always find your way back to the movies!
         </p>
         <button
-          className="flex items-center gap-1 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 bg-nexflix-red"
+          className="flex items-center gap-1 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 bg-nexflix-red cursor-pointer"
           onClick={() => navigate("/")}
         >
           Go Home <ArrowRight size={17} />

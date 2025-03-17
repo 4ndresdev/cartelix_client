@@ -1,14 +1,26 @@
 import { useParams, Navigate } from "react-router";
 import useMovieDetails from "@/pages/movies/details/hooks/useMovieDetails";
-import MovieDetailsHeader from "@/components/ui/movieDetails/MovieDetailsHeader";
-import MovieDetailsDescription from "@/components/ui/movieDetails/MovieDetailsDescription";
-import MovieDetailsDates from "@/components/ui/movieDetails/MovieDetailsDates";
-import MovieDetailsTimes from "@/components/ui/movieDetails/MovieDetailsTimes";
+import {
+  MovieDetailsHeader,
+  MovieDetailsDescription,
+  MovieDetailsDates,
+  MovieDetailsTimes,
+  MovieDetailsSeatsSelection,
+} from "@/components/ui/movieDetails";
 
 const MovieDetails = () => {
   const { movie_id } = useParams();
-  const { movie, bookDate, setBookDate, bookTime, setBookTime } =
-    useMovieDetails(Number(movie_id));
+  const {
+    movie,
+    bookDate,
+    setBookDate,
+    bookTime,
+    setBookTime,
+    seats,
+    selectedSeats,
+    setSelectedSeats,
+    totalPrice,
+  } = useMovieDetails(Number(movie_id));
 
   if (movie.isLoading) {
     return <div>Loading...</div>;
@@ -41,19 +53,30 @@ const MovieDetails = () => {
               setBookDate={setBookDate}
             />
           </section>
-          <section>
-            {bookDate && bookDate.show_times.length > 0 && (
+          {bookDate && bookDate.show_times.length > 0 && (
+            <section>
               <MovieDetailsTimes
                 times={bookDate.show_times}
                 bookTime={bookTime?.time || null}
                 setBookTime={setBookTime}
               />
-            )}
-          </section>
-          <hr className="mt-5 border border-slate-800" />
-          <section>seats</section>
-          <button className="book" disabled>
-            Book
+            </section>
+          )}
+          <hr className="mt-5 border border-slate-900" />
+          {seats && seats.length > 0 && (
+            <section>
+              <MovieDetailsSeatsSelection
+                seats={seats}
+                selectedSeats={selectedSeats}
+                setSelectedSeats={setSelectedSeats}
+              />
+            </section>
+          )}
+          <button
+            className="book cursor-pointer"
+            disabled={!selectedSeats.length}
+          >
+            Book {totalPrice}$
           </button>
         </div>
       </div>
