@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Movies, MovieDetails, MoviesLayout } from "@/pages/movies";
+import Movies from "@/pages/movies/Movies";
+import MovieDetails from "@/pages/movies/details/MovieDetails";
+import MoviesLayout from "@/components/layout/MoviesLayout";
 import PageNotFound from "@/pages/PageNotFound";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";

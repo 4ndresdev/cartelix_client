@@ -1,5 +1,5 @@
-import { Movies } from "@/interfaces/movies.interface";
-import { MovieCard } from "@/components/ui/movie";
+import { Movies } from "@/types/movies.interface";
+import { MovieCard } from "@/components/movie";
 
 interface MoviesGridProps {
   movies: Movies[];

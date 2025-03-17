@@ -18,7 +18,7 @@ const PageNotFound = () => {
           <p className="text-lg font-normal">404</p>
         </div>
         <h1 className="text-2xl lg:text-6xl font-bold text-start m-0">
-          Oops! This page took a detour to the popcorn stand! 🍿🎬
+          Oops! This page took a wrong turn to the snack stand! 🍿🎬
         </h1>
         <p className="text-lg font-normal">
           But don't worry, you can always find your way back to the movies!

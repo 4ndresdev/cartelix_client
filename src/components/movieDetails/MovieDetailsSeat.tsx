@@ -1,13 +1,17 @@
-import { Seats } from "@/interfaces/seats.interface";
+import { Seats } from "@/types/seats.interface";
 import { User } from "lucide-react";
 
-interface SeatProps {
+interface MovieDetailsSeatProps {
   seat: Seats;
   selectedSeats: Seats[];
   setSelectedSeats: React.Dispatch<React.SetStateAction<Seats[]>>;
 }
 
-const Seat = ({ seat, selectedSeats, setSelectedSeats }: SeatProps) => {
+const MovieDetailsSeat = ({
+  seat,
+  selectedSeats,
+  setSelectedSeats,
+}: MovieDetailsSeatProps) => {
   const isSelected = selectedSeats.some(
     (selectedSeat) => selectedSeat.id === seat.id
   );
@@ -48,4 +52,4 @@ const Seat = ({ seat, selectedSeats, setSelectedSeats }: SeatProps) => {
   );
 };
 
-export default Seat;
+export default MovieDetailsSeat;

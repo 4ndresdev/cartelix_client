@@ -1,5 +1,5 @@
-import { MovieDetail } from "@/interfaces/movieDetails.interface";
-import { minutesToHours } from "@/utils/strings.format";
+import { MovieDetail } from "@/types/movieDetails.interface";
+import { minutesToHours } from "@/utils";
 
 interface MovieDetailsDescriptionProps {
   movie: MovieDetail;

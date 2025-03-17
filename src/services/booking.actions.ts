@@ -1,6 +1,6 @@
 import cartelixAPI from "@/api/movies.api";
-import { Booking } from "@/interfaces/booking.interface";
-import { sleep } from "@/utils/helpers";
+import { Booking } from "@/types/booking.interface";
+import { sleep } from "@/utils";
 
 interface BookingProps {
   show_time_id: number;

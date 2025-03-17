@@ -1,4 +1,4 @@
-import { ShowDate } from "@/interfaces/movieDetails.interface";
+import { ShowDate } from "@/types/movieDetails.interface";
 import { format } from "date-fns";
 
 interface MovieDetailsDatesProps {
