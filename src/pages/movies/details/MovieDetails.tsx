@@ -20,6 +20,10 @@ const MovieDetails = () => {
     selectedSeats,
     setSelectedSeats,
     totalPrice,
+    email,
+    setEmail,
+    bookTickets,
+    submitLoading,
   } = useMovieDetails(Number(movie_id));
 
   if (movie.isLoading) {
@@ -29,6 +33,8 @@ const MovieDetails = () => {
   if (!movie.data || movie.isError) {
     return <Navigate to="/404" />;
   }
+
+  const isAvailableToBook: boolean = selectedSeats.length > 0 && !!email;
 
   return (
     <div className="movie-details">
@@ -62,21 +68,36 @@ const MovieDetails = () => {
               />
             </section>
           )}
-          <hr className="mt-5 border border-slate-900" />
           {seats && seats.length > 0 && (
             <section>
+              <hr className="mt-5 border border-slate-900" />
               <MovieDetailsSeatsSelection
                 seats={seats}
                 selectedSeats={selectedSeats}
                 setSelectedSeats={setSelectedSeats}
               />
+              <hr className="mt-5 border border-slate-900" />
+              <p className="text-slate-200 mt-2">
+                Please enter your email to receive the tickets
+              </p>
+              <input
+                type="email"
+                className="w-full mt-2 text-slate-200 bg-slate-800 border border-slate-900 rounded-md p-3 focus:outline-none placeholder:text-slate-400 placeholder:font-medium"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+              />
             </section>
           )}
           <button
+            onClick={bookTickets}
             className="book cursor-pointer"
-            disabled={!selectedSeats.length}
+            disabled={!isAvailableToBook || submitLoading}
           >
-            Book {totalPrice}$
+            {submitLoading ? (
+              <span>Booking tickets...</span>
+            ) : (
+              `Book ${totalPrice}$`
+            )}
           </button>
         </div>
       </div>

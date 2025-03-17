@@ -13,7 +13,7 @@ const MovieDetailsTimes = ({
 }: MovieDetailsDatesProps) => {
   return (
     <div className="mt-2">
-      <p className="text-slate-200">Select hour</p>
+      <p className="text-slate-200">Select an hour</p>
       <div className="flex flex-wrap gap-2 mt-5">
         {times.map((time) => {
           const isSelected = bookTime && bookTime === time.time;

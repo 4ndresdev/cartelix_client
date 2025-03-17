@@ -49,7 +49,10 @@ const MovieDetailsSeatsSelection = ({
           <p className="text-slate-200">Seats selected</p>
           <div className="flex gap-2 mt-2 flex-wrap bg-slate-900 p-2 rounded-md">
             {selectedSeats.map((seat) => (
-              <span className="bg-slate-700 text-white px-5 rounded-md font-medium">
+              <span
+                key={seat.id}
+                className="bg-slate-700 text-white px-5 rounded-md font-medium"
+              >
                 {seat.row}
                 {seat.number}
               </span>
