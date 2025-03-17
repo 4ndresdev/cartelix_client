@@ -1,12 +1,12 @@
 import { useParams, Navigate } from "react-router";
-import useMovieDetails from "@/pages/movies/details/hooks/useMovieDetails";
+import useMovieDetails from "@/hooks/useMovieDetails";
 import {
   MovieDetailsHeader,
   MovieDetailsDescription,
   MovieDetailsDates,
   MovieDetailsTimes,
   MovieDetailsSeatsSelection,
-} from "@/components/ui/movieDetails";
+} from "@/components/movieDetails";
 
 const MovieDetails = () => {
   const { movie_id } = useParams();
@@ -89,6 +89,7 @@ const MovieDetails = () => {
             </section>
           )}
           <button
+            aria-label="Book tickets"
             onClick={bookTickets}
             className="book cursor-pointer"
             disabled={!isAvailableToBook || submitLoading}

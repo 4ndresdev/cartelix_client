@@ -1,6 +1,6 @@
 import { Seats } from "@/types/seats.interface";
 import { User } from "lucide-react";
-import { Seat } from "@/components/ui/movieDetails";
+import { MovieDetailsSeat } from "@/components/movieDetails";
 
 interface MovieDetailsSeatsSelectionProps {
   seats: Seats[];
@@ -35,7 +35,7 @@ const MovieDetailsSeatsSelection = ({
       <div className="grid grid-cols-10 gap-2 mt-5">
         {seats.map((seat) => {
           return (
-            <Seat
+            <MovieDetailsSeat
               key={seat.id}
               seat={seat}
               selectedSeats={selectedSeats}

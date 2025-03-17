@@ -1,5 +1,5 @@
-import { TrendingMoviesGrid, MoviesGrid, Search } from "@/components/ui/movie";
-import useMovies from "@/pages/movies/hooks/useMovies";
+import { TrendingMoviesGrid, MoviesGrid, Search } from "@/components/movie";
+import useMovies from "@/hooks/useMovies";
 
 const Movies = () => {
   const { searchTerm, setSearchTerm, movies, trendingMovies } = useMovies();

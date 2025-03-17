@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router";
 import { Movies } from "@/types/movies.interface";
 import { useQueryClient } from "@tanstack/react-query";
@@ -7,7 +8,7 @@ interface MovieCardProps {
   movie: Movies;
 }
 
-function MovieCard({ movie }: MovieCardProps) {
+const MovieCard = memo(({ movie }: MovieCardProps) => {
   const queryClient = useQueryClient();
   const { title, poster_path, description, rate } = movie;
 
@@ -40,6 +41,8 @@ function MovieCard({ movie }: MovieCardProps) {
       </div>
     </Link>
   );
-}
+});
+
+// MovieCard.displayName = "MovieCard";
 
 export default MovieCard;
