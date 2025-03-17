@@ -3,7 +3,7 @@ import { getMovieById } from "@/services/movies.actions";
 import { getSeatsByTheaterId } from "@/services/seats.actions";
 import { ShowDate, ShowTime } from "@/types/movieDetails.interface";
 import { Seats } from "@/types/seats.interface";
-import { sleep } from "@/utils/helpers";
+import { sleep } from "@/utils";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
