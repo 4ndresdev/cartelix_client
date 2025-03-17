@@ -23,7 +23,7 @@ function useMovies() {
   });
 
   useEffect(() => {
-    if (debouncedSearchTerm && movies?.data) {
+    if (debouncedSearchTerm && movies?.data && movies.data.length > 0) {
       const movie = {
         movie_id: movies.data[0].id,
         poster_url: movies.data[0].backdrop_path,

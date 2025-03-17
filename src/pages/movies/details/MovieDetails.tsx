@@ -1,9 +1,12 @@
 import { useParams, Navigate } from "react-router";
 import useMovieDetails from "@/pages/movies/details/hooks/useMovieDetails";
-import MovieDetailsHeader from "@/components/ui/movieDetails/MovieDetailsHeader";
-import MovieDetailsDescription from "@/components/ui/movieDetails/MovieDetailsDescription";
-import MovieDetailsDates from "@/components/ui/movieDetails/MovieDetailsDates";
-import MovieDetailsTimes from "@/components/ui/movieDetails/MovieDetailsTimes";
+import {
+  MovieDetailsHeader,
+  MovieDetailsDescription,
+  MovieDetailsDates,
+  MovieDetailsTimes,
+  // MovieDetailsSeatsSelection,
+} from "@/components/ui/movieDetails";
 
 const MovieDetails = () => {
   const { movie_id } = useParams();
@@ -50,8 +53,8 @@ const MovieDetails = () => {
               />
             )}
           </section>
-          <hr className="mt-5 border border-slate-800" />
-          <section>seats</section>
+          <hr className="mt-5 border border-slate-900" />
+          <section>{/* <MovieDetailsSeatsSelection /> */}</section>
           <button className="book" disabled>
             Book
           </button>
