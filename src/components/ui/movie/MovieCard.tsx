@@ -1,7 +1,7 @@
 import { Link } from "react-router";
-import { Movies } from "@/interfaces/movies.interface";
+import { Movies } from "@/types/movies.interface";
 import { useQueryClient } from "@tanstack/react-query";
-import { getMovieById } from "@/actions/movies.actions";
+import { getMovieById } from "@/services/movies.actions";
 
 interface MovieCardProps {
   movie: Movies;

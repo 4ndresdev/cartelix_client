@@ -4,7 +4,7 @@ import {
   getMovies,
   getTrendingMovies,
   createTrendingMovie,
-} from "@/actions/movies.actions";
+} from "@/services/movies.actions";
 import { useQuery } from "@tanstack/react-query";
 
 function useMovies() {

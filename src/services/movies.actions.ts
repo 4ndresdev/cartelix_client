@@ -1,6 +1,6 @@
 import cartelixAPI from "@/api/movies.api";
-import { MovieDetail } from "@/interfaces/movieDetails.interface";
-import { Movies, TrendingMovies } from "@/interfaces/movies.interface";
+import { MovieDetail } from "@/types/movieDetails.interface";
+import { Movies, TrendingMovies } from "@/types/movies.interface";
 
 export const getMovies = async (searchTerm: string): Promise<Movies[]> => {
   const path = searchTerm ? `/movies/search?query=${searchTerm}` : "/movies";

@@ -1,4 +1,4 @@
-import { ShowTime } from "@/interfaces/movieDetails.interface";
+import { ShowTime } from "@/types/movieDetails.interface";
 
 interface MovieDetailsDatesProps {
   times: ShowTime[];

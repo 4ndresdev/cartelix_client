@@ -1,8 +1,8 @@
-import { createBooking } from "@/actions/booking.actions";
-import { getMovieById } from "@/actions/movies.actions";
-import { getSeatsByTheaterId } from "@/actions/seats.actions";
-import { ShowDate, ShowTime } from "@/interfaces/movieDetails.interface";
-import { Seats } from "@/interfaces/seats.interface";
+import { createBooking } from "@/services/booking.actions";
+import { getMovieById } from "@/services/movies.actions";
+import { getSeatsByTheaterId } from "@/services/seats.actions";
+import { ShowDate, ShowTime } from "@/types/movieDetails.interface";
+import { Seats } from "@/types/seats.interface";
 import { sleep } from "@/utils/helpers";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";

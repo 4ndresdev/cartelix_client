@@ -1,5 +1,5 @@
 import cartelixAPI from "@/api/movies.api";
-import { Seats } from "@/interfaces/seats.interface";
+import { Seats } from "@/types/seats.interface";
 
 export const getSeatsByTheaterId = async (
   theaterId: number

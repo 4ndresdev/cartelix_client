@@ -1,4 +1,4 @@
-import { TrendingMovies } from "@/interfaces/movies.interface";
+import { TrendingMovies } from "@/types/movies.interface";
 import { TrendingMoviesCard } from "@/components/ui/movie/";
 
 interface TrendingMoviesGridProps {

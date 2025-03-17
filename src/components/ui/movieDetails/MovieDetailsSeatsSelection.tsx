@@ -1,4 +1,4 @@
-import { Seats } from "@/interfaces/seats.interface";
+import { Seats } from "@/types/seats.interface";
 import { User } from "lucide-react";
 import { Seat } from "@/components/ui/movieDetails";
 

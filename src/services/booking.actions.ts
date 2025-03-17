@@ -1,5 +1,5 @@
 import cartelixAPI from "@/api/movies.api";
-import { Booking } from "@/interfaces/booking.interface";
+import { Booking } from "@/types/booking.interface";
 import { sleep } from "@/utils/helpers";
 
 interface BookingProps {
