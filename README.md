@@ -23,7 +23,11 @@
 
 ## 📷 Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/4ndresdev/cartelix_client/blob/main/public/screen.png?raw=true)
+
+## Demo
+
+[Demo](https://cartelixclient-production.up.railway.app/)
 
 ## 🚀 Installation
 
