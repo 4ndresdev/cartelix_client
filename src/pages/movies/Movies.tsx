@@ -6,7 +6,7 @@ const Movies = () => {
   return (
     <>
       <header>
-        <img src="/hero.png" alt="Hero Banner" />
+        <img src="/hero.webp" alt="Hero Banner" />
         <p className="text-white text-center mt-3 font-medium">
           Discover. Book. Enjoy. 🎟️✨
         </p>
