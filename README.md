@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# 🎬 Cartelix Server
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **Cartelix Client** is a modern frontend application built with **React** and **TypeScript** that provides a seamless movie ticket booking experience. It connects to the Cartelix Server API to display movies, manage showtimes, handle seat selections, and process bookings.
 
-Currently, two official plugins are available:
+## 🔧 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** ⚡ (Latest React version with enhanced features)
+- **TypeScript** 📦 (Type-safe development)
+- **TanStack React Query** 🔄 (Data fetching and caching)
+- **React Router** 🧭 (Navigation and routing)
+- **Tailwind CSS** 🎨 (Utility-first styling)
+- **Axios** 📡 (HTTP client)
+- **Lucide React** 🎭 (Icons library)
+- **Vite** ⚡ (Next-generation build tool)
 
-## Expanding the ESLint configuration
+## 🔥 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Browse and search for movies.  
+✅ View detailed movie information  
+✅ Select showtimes and dates  
+✅ Interactive seat selection interface  
+✅ Responsive design for all devices
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📷 Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+  git clone https://github.com/4ndresdev/cartelix_client.git
+  cd cartelix_client
+  npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+.env setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```env
+VITE_API_URL=http://localhost:3000/api
 ```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+## License
+
+Feel free to contribute or report issues! 🎟️
